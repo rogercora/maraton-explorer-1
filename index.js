@@ -1,64 +1,34 @@
-//const idade = 23;
-//const maior18 = idade >= 18;
+const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.querySelector('.menu-toggle');
+const faqItems = document.querySelectorAll('.faq-item');
+const leadForm = document.querySelector('#leadForm');
+const formFeedback = document.querySelector('#formFeedback');
 
-/*if (maior18) {
-  window.alert("Pode Tirar")
-} else {
- window.alert("N")
-}
-*/
+menuToggle?.addEventListener('click', () => {
+  navLinks?.classList.toggle('open');
+});
 
+navLinks?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const href = link.getAttribute('href');
+    const target = document.querySelector(href);
+    target?.scrollIntoView({ behavior: 'smooth' });
+    navLinks.classList.remove('open');
+  });
+});
 
+faqItems.forEach((item) => {
+  const header = item.querySelector('header');
+  header?.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
 
-
-const elementoResposta = document.querySelector("#resposta");
-const inputPergunta = document.querySelector("#inputPergunta");
-const buttonPerguntar = document.querySelector('#buttonPerguntar');
-const respostas = [
-  "Certeza!",
-  "Não tenho tanta certeza.",
-  "É decididamente assim.",
-  "Não conte com isso.",
-  "Sem dúvidas!",
-  "Pergunte novamente mais tarde.",
-  "Sim, definitivamente!",
-  "Minha resposta é não.",
-  "Você pode contar com isso.",
-  "Melhor não te dizer agora.",
-  "A meu ver, sim.",
-  "Minhas fontes dizem não.",
-  "Provavelmente.",
-  "Não é possível prever agora.",
-  "Perspectiva boa.",
-  "As perspectivas não são tão boas.",
-  "Sim.",
-  "Concentre-se e pergunte novamente.",
-  "Sinais apontam que sim.",
-]
-
-// clicar em fazer pergunta
-function fazerPergunta() {
-
-  if(inputPergunta.value == "") {
-    alert("Digite sua pergunta")
-    return
-  }
-
-  buttonPerguntar.setAttribute("disabled", true)
-
-  const pergunta = "<div>" + inputPergunta.value + "</div>"
-
-  // gerar numero aletorio
-  const  totalRespostas = respostas.length
-  const numeroAleatorio = Math.floor(Math.random() * totalRespostas)
-
-  elementoResposta.innerHTML = pergunta + respostas[numeroAleatorio]
-
-  elementoResposta.style.opacity = 1;
-
-  // sumir a resposta depois de 3 segundos
-  setTimeout(function() {
-    elementoResposta.style.opacity = 0;
-    buttonPerguntar.removeAttribute("disabled")
-  }, 3000)
-}
+leadForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(leadForm);
+  const name = formData.get('nome');
+  formFeedback.textContent = `Obrigado, ${name}! Preparamos um plano personalizado e entraremos em contato em até 24h.`;
+  leadForm.reset();
+});
