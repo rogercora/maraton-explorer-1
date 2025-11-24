@@ -1,30 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maratona Explorer</title>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senha Informática | Gestão inteligente para 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="text/javascript" src="./index.js" defer></script>
   </head>
 
   <body>
-    <div id="container">
-      <img src="https://gist.githubusercontent.com/maykbrito/0acdf4ce919838ffed50915a31fc5b23/raw/6f4dd01ec3116428ec4c99255944cb9ac7927590/cristal-ball.svg" alt="Imagem de uma bola de cristal">
-      <h1>Vou revelar seu destino!</h1>
-      <p>Clique em fazer pergunta para que seu destino seja revelado.</p>
-      <input id="inputPergunta" type="text" placeholder="Digite sua pergunta">
-      <button id="buttonPerguntar" onclick="fazerPergunta()">Fazer Pergunta</button>
+    <header class="top-bar">
+      <div class="logo">
+        <span class="dot"></span>
+        Senha Informática
+      </div>
+      <nav class="nav-links">
+        <a href="#produtos">Produtos</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#depoimentos">Clientes</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="actions">
+        <a class="secondary" href="#contato">Fale com vendas</a>
+        <a class="primary" href="#cta">Teste agora</a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </header>
 
-      <h3 id="resposta"></h3>
-    </div>
+    <main>
+      <section class="hero" id="topo">
+        <div class="hero-content">
+          <p class="badge">Inspirado na clareza do Bling</p>
+          <h1>
+            Gestão leve, visual clean e pronta para crescer com você em 2025.
+          </h1>
+          <p class="hero-subtitle">
+            Soluções que lembram a simplicidade do Bling, com a inteligência
+            Senha Informática. Unifique vendas, estoque e fiscal em uma
+            experiência intuitiva — sem ruído e com foco total em conversão.
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#produtos">Conhecer produtos</a>
+            <a class="ghost" href="#recursos">Explorar recursos</a>
+          </div>
+          <div class="metrics">
+            <div>
+              <span>+4k</span>
+              <small>empresas crescendo com a gente</small>
+            </div>
+            <div>
+              <span>98%</span>
+              <small>satisfação no suporte</small>
+            </div>
+            <div>
+              <span>72h</span>
+              <small>onboarding assistido</small>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card__header">
+            <div class="pill primary">Painel unificado</div>
+            <span class="caption">Fluxo em tempo real</span>
+          </div>
+          <h3>Controle claro de ponta a ponta</h3>
+          <p>
+            KPIs alinhados, conciliação automática e alertas simples de ler. Um
+            cockpit enxuto para reduzir cliques e acelerar decisões.
+          </p>
+          <div class="mini-stats">
+            <div>
+              <strong>Fiscal sem atrito</strong>
+              <span>Notas + SPED com robôs dedicados</span>
+            </div>
+            <div>
+              <strong>Margem protegida</strong>
+              <span>Preços inteligentes por canal</span>
+            </div>
+            <div>
+              <strong>Visão omnichannel</strong>
+              <span>Marketplace, loja e PDV conectados</span>
+            </div>
+          </div>
+          <a class="secondary cta-inline" href="#cta">Quero ver na prática</a>
+        </div>
+      </section>
 
+      <section class="products" id="produtos">
+        <div class="section-header">
+          <p class="badge">Portfólio 2025</p>
+          <h2>Produtos pensados para vender e entregar mais.</h2>
+          <p class="subtitle">
+            Copys limpas, benefícios objetivos e interface clara inspirada no
+            Bling para acelerar entendimento e decisão.
+          </p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="pill">Mais vendido</div>
+            <h3>ERP Nexus</h3>
+            <p>
+              Centralize estoque, vendas e fiscal em um painel intuitivo. Tenha
+              automação de notas, conciliação financeira e alertas que evitam
+              ruptura.
+            </p>
+            <ul>
+              <li>Onboarding em 72h com time dedicado</li>
+              <li>Dashboard com previsões de demanda</li>
+              <li>Integração com marketplaces e PDV</li>
+            </ul>
+            <a class="cta" href="#cta">Quero impulsionar agora</a>
+          </article>
 
+          <article class="product-card">
+            <div class="pill neutral">Lançamento</div>
+            <h3>Sellflow Omnichannel</h3>
+            <p>
+              Copys para vender em qualquer canal: catálogo unificado, regras de
+              preço dinâmico e logística conectada aos principais parceiros.
+            </p>
+            <ul>
+              <li>Checkout rápido e seguro em todos os canais</li>
+              <li>Campanhas personalizadas por segmento</li>
+              <li>Relatórios de margem em tempo real</li>
+            </ul>
+            <a class="ghost" href="#contato">Quero apresentar para meu time</a>
+          </article>
+
+          <article class="product-card">
+            <div class="pill neutral">Fiscal automático</div>
+            <h3>AutomaX Compliance</h3>
+            <p>
+              Esqueça retrabalho. A solução fiscal que valida regras, emite notas
+              e entrega obrigações sem dores de cabeça — com alertas proativos.
+            </p>
+            <ul>
+              <li>Atualizações fiscais diárias e automáticas</li>
+              <li>Monitoramento de SLA e contingência</li>
+              <li>Suporte humano 24/7 para o que importa</li>
+            </ul>
+            <a class="ghost" href="#cta">Ver demonstração guiada</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="features" id="recursos">
+        <div class="section-header">
+          <p class="badge">Recursos premium</p>
+          <h2>Conecte tecnologia, times e clientes.</h2>
+          <p class="subtitle">
+            Visual claro, com cards suaves e hierarquia simples para localizar o
+            que importa em segundos.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Integrações rápidas</h3>
+            <p>APIs documentadas e conectores prontos para marketplace, CRM e banco.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Automação inteligente</h3>
+            <p>Fluxos de estoque e fiscal com alertas automáticos e previsões.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Time de sucesso</h3>
+            <p>Squad dedicada para onboarding, treinamento e playbooks de vendas.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Segurança em primeiro lugar</h3>
+            <p>LGPD, backups automáticos e monitoramento 24/7 de incidentes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-panel" id="cta">
+        <div class="cta-content">
+          <h2>Chegou a hora de vender mais com menos esforço.</h2>
+          <p>
+            Fale com nossos especialistas e veja como ativar uma operação ágil em
+            poucos dias. Sem burocracia, com suporte premiado.
+          </p>
+          <div class="cta-actions">
+            <a class="cta" href="#contato">Agendar demonstração</a>
+            <a class="ghost" href="#faq">Ver dúvidas frequentes</a>
+          </div>
+        </div>
+        <div class="cta-card">
+          <h3>Simule seu cenário</h3>
+          <p>Preencha e receba um plano personalizado em 24h.</p>
+          <form class="lead-form" id="leadForm">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Como podemos te chamar?" required />
+
+            <label for="email">E-mail corporativo</label>
+            <input id="email" name="email" type="email" placeholder="você@empresa.com" required />
+
+            <label for="segmento">Segmento</label>
+            <select id="segmento" name="segmento" required>
+              <option value="">Selecione</option>
+              <option>Varejo</option>
+              <option>E-commerce</option>
+              <option>Distribuição</option>
+              <option>Serviços</option>
+            </select>
+
+            <label for="porte">Porte da operação</label>
+            <select id="porte" name="porte" required>
+              <option value="">Selecione</option>
+              <option>Até 10 colaboradores</option>
+              <option>11 a 50 colaboradores</option>
+              <option>Mais de 50 colaboradores</option>
+            </select>
+
+            <button type="submit">Quero meu plano</button>
+            <small class="form-note">Retornamos em até 1 dia útil.</small>
+          </form>
+          <div class="form-feedback" id="formFeedback" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="depoimentos">
+        <div class="section-header">
+          <p class="badge">Histórias reais</p>
+          <h2>Resultados que falam por si.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>
+              “O ERP Nexus conectou nossas lojas físicas e marketplace em uma
+              semana. Hoje fechamos o mês com 18% mais margem.”
+            </p>
+            <div class="author">Marina, COO na Aurora Varejo</div>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              “Com o AutomaX eliminamos multas e ganhamos previsibilidade fiscal.
+              O suporte 24/7 realmente cumpre o que promete.”
+            </p>
+            <div class="author">Carlos, CFO na Nexa Distribuição</div>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              “O Sellflow trouxe personalização de ofertas e aumentou o ticket
+              médio em 23%. Time de CS impecável.”
+            </p>
+            <div class="author">Larissa, Head de E-commerce na Brise</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="section-header">
+          <p class="badge">FAQ</p>
+          <h2>Dúvidas frequentes</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <header>
+              <h3>Como funciona o onboarding?</h3>
+              <span class="toggle">+</span>
+            </header>
+            <p>
+              Um squad acompanha sua equipe com checklists e treinamentos. Em 72h
+              você já tem fluxos críticos operando e metas mapeadas.
+            </p>
+          </article>
+          <article class="faq-item">
+            <header>
+              <h3>Existe período de teste?</h3>
+              <span class="toggle">+</span>
+            </header>
+            <p>
+              Sim. Criamos um ambiente sandbox com seus dados e um roteiro de
+              sucesso. Ao final, você recebe um relatório com o impacto projetado.
+            </p>
+          </article>
+          <article class="faq-item">
+            <header>
+              <h3>Quais integrações estão disponíveis?</h3>
+              <span class="toggle">+</span>
+            </header>
+            <p>
+              Conectamos com marketplaces, ERPs legados, CRMs e gateways de
+              pagamento. Também oferecemos API pública para cenários específicos.
+            </p>
+          </article>
+          <article class="faq-item">
+            <header>
+              <h3>O suporte é realmente 24/7?</h3>
+              <span class="toggle">+</span>
+            </header>
+            <p>
+              Sim. Monitoramos sua operação e abrimos tickets proativamente quando
+              algo sai do padrão, com SLA claro para cada criticidade.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <div class="contact-card">
+          <h2>Pronto para liderar o próximo ciclo?</h2>
+          <p>
+            Vamos mostrar como a Senha Informática combina tecnologia e equipe
+            para simplificar sua operação.
+          </p>
+          <div class="contact-actions">
+            <a class="cta" href="#cta">Quero uma demonstração</a>
+            <a class="ghost" href="mailto:contato@senhainformatica.com.br">contato@senhainformatica.com.br</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">Senha Informática</div>
+      <div class="footer-links">
+        <a href="#produtos">Produtos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-note">© 2025 Senha Informática. Operações inteligentes.</div>
+    </footer>
   </body>
-
 </html>
-
